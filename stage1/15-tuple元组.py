@@ -33,3 +33,8 @@ print(f"统计元素出现的次数：{count}")
 # len(元组)：返回指定元组中元素的个数
 count = len(user_info)
 print(f"获取元组中元素的总个数：{count}")
+
+# 元组中的列表，可以进行修改！！！
+user_info = ("terry", 18, 50.5, ["篮球", "足球", "排球"])
+user_info[3][1] = "棒球"
+print(f"元组中的列表，可以进行修改：{user_info}")
