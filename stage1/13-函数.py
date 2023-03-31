@@ -28,7 +28,7 @@ print(var02)
 print(var03)
 
 
-# None 在 if 语句的使用案例
+# None 使用案例
 def check_age(age):
     if age > 18:
         return "success"
@@ -39,3 +39,5 @@ def check_age(age):
 var04 = check_age(17)
 if not var04:
     print("未成年")
+
+var05 = None
