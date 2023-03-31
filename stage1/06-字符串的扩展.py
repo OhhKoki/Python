@@ -7,6 +7,7 @@ var03 = """ hellow
     shijie
 """
 
+
 # 在字符串中使用单引号
 var04 = "'hello world'"
 
@@ -17,12 +18,14 @@ var05 = '"hello world"'
 var06 = "\"hello world\""
 var07 = '\'hello world\''
 
+
 # 2）字符串的拼接
 var08 = "hello"
 var09 = "world"
 var10 = 18287839851
 print(var08 + var09)
 # print(var08 + var09 + var10)    # 使用 + 进行拼接字符串时，拼接的对象必须都是字符串
+
 
 """
     3）字符串格式化方式一
@@ -43,6 +46,7 @@ print(var15)
 var16 = f"姓名：{var11}，年龄：{var12}，体重：{var13}"
 print(var16)
 
+
 """
     4）字符串格式化过程中对数字精度的控制
         精度控制的语法：m.n
@@ -57,6 +61,7 @@ print("对 var17 宽度限制为 5，结果为：%5d" % var17)
 print("对 var17 宽度限制为 1，结果为：%1d" % var17)
 print("对 var18 宽度限制为 7，小数精度限制为 2，结果为：%7.2f" % var18)
 print("对 var18 宽度不限制，小数精度限制为 2，结果为：%.2f" % var18)
+
 
 # 表达式的格式化
 print("2 ** 2 的结果为：%d" % (2 ** 2))

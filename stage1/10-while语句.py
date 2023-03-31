@@ -5,25 +5,27 @@
 """
 
 
+import random    # 导入类
+
+
 # 练习：0-100 的累加
 i = 0
-sum = 0
+result = 0
 while i <= 100:
     i += 1
-    sum += i
+    result += i
     if i == 100:
-        print(f"当前 sum 的值为：{sum}")
+        print(f"当前 result 的值为：{result}")
 
 
 # 练习：猜数字游戏
-import random    # 导入类
-randomNum = random.randint(1,100)    # 获取一个 1-100 之间的随机数
+random_number = random.randint(1, 100)    # 获取一个 1-100 之间的随机数
 flag = True
 while flag:
-    guessNum = int(input("请输入你猜的数字：\n"))
-    if guessNum > randomNum:
+    guess_number = int(input("请输入你猜的数字：\n"))
+    if guess_number > random_number:
         print("你猜大了")
-    elif guessNum < randomNum:
+    elif guess_number < random_number:
         print("你猜小了")
     else:
         print("你猜对了")

@@ -2,6 +2,7 @@
 # float(x)：将 x 转为一个浮点数
 # str(x)：将 x 转为一个字符串
 
+
 var01 = int(12)
 var02 = int(12.34)
 var03 = int("12")
