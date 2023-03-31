@@ -93,3 +93,22 @@ print(f"列表中元素的个数位：{count}")
 # 清空列表
 user_info.clear()
 print(f"清空列表：{user_info}")
+
+print("-----")
+
+"""
+    使用 for 或者 while 对 list 进行遍历
+"""
+user_info = ["terry", 18, 50.5, ["篮球", "足球", "排球"]]
+
+for item in user_info:
+    print(item)
+
+print("-----")
+
+index = 0
+
+while index < len(user_info):
+    print(user_info[index])
+    index += 1
+
