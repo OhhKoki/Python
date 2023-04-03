@@ -7,13 +7,25 @@
             变量名 = list()
 
         list 的特点为：有序，有重复，数量和类型无限制
+
+    list 列表的常用方法
+        01）列表.index(element)：查找元素在列表内的下标（第一个），找不到则报错；
+        02）列表[index] = 值：对列表指定位置处的元素进行重新赋值；
+        03）列表.insert(index, element)：在列表的指定索引前，插入指定元素；
+        04）列表.append(element)：将指定元素，追加到列表的尾部；
+        05）列表.extend(element)：将其他数据容器的元素取出，然后依次追加到当前容器尾部；
+        06）列表.pop(index)：删除指定索引处的元素；
+        07）del 列表[index]：删除指定索引处的元素；
+        08）列表.remove(element)：删除指定元素（注意：遍历列表，删除第一个匹配的元素！！！）
+        09）列表.count(element)：统计指定元素在列表内的数量；
+        10）len(列表)：获取列表中元素的个数；
+        11）列表.clear()：清空列表；
 """
+
 
 # list 可以包含重复的元素，元素的类型没有限制
 user_info = ["terry", "terry", 18, 50.5, ["篮球", "足球", "排球"]]
-
-for item in user_info:
-    print(item)
+print(f"列表的定义：{user_info}")
 
 print("-----")
 
@@ -35,7 +47,7 @@ print(user_info[4][1])
 print("-----")
 
 """
-    list 的常用方法
+    list 列表的常用方法
         01）列表.index(element)：查找元素在列表内的下标（第一个），找不到则报错；
         02）列表[index] = 值：对列表指定位置处的元素进行重新赋值；
         03）列表.insert(index, element)：在列表的指定索引前，插入指定元素；
