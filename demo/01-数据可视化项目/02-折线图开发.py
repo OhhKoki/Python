@@ -18,6 +18,11 @@ us_data = f_us.read()
 jp_data = f_jp.read()
 in_data = f_in.read()
 
+# 关闭文件
+f_us.close()
+f_jp.close()
+f_in.close()
+
 # 去掉不符合 JSON 规范的开头部分
 us_data = us_data.replace("jsonp_1629344292311_69436(", "")
 jp_data = jp_data.replace("jsonp_1629350871167_29498(", "")
@@ -67,10 +72,5 @@ line.set_global_opts(
 
 # 渲染图表
 line.render()
-
-# 关闭文件
-f_us.close()
-f_jp.close()
-f_in.close()
 
 
