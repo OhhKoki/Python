@@ -21,4 +21,8 @@
     4、安装第三方包
         语法：pip install 包名称
         案例：pip install numpy
+
+        mac 环境为：
+            语法：pip3 install 包名
+            案例：pip3 install pyecharts
 """
