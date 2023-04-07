@@ -8,7 +8,7 @@ from pyecharts.options import *
 
 
 # 打开文件
-file = open("/Users/terry/Documents/Workspace/PythonProjects/Python/data/1960-2019全球GDP数据.csv", "r", encoding="GB2312")
+file = open("/Users/terry/Documents/Workspace/PythonProjects/Python/data/经济.csv", "r", encoding="GB2312")
 
 # 读取文件
 data_lines = file.readlines()
