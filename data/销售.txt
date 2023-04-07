@@ -1,0 +1,13 @@
+2011-01-01,234df33g9-sdfsdf-4dfsdf545,1452,湖南省
+2011-01-01,234d2sdg9-sdfsdf-4dfsdf545,3233,山东省
+2011-01-01,232323233-sdfsdf-4dfsdf545,2323,湖北省
+2011-01-01,23433sdg9-sdfsdf-4dfsdf545,5665,河南省
+2011-01-01,2344fsdg9-sdfsdf-4dfsdf545,8787,台湾省
+2011-01-01,234dfs233-sdfsdf-4dfsdf545,4545,广东省
+2011-01-01,255dfsdg9-sdfsdf-4dfsdf545,2341,山西省
+2011-01-01,2343fsdg9-sdfsdf-4dfsdf545,3435,江苏省
+2011-01-01,234dfsd23-sdfsdf-4dfsdf545,5464,浙江省
+2011-01-01,234df4dg9-sdfsdf-4dfsdf545,2323,四川省
+2011-01-01,234df44g9-sdfsdf-4dfsdf545,2342,云南省
+2011-01-01,234dfydg9-sdfsdf-4dfsdf545,2323,贵州省
+2011-01-01,234dfsdg9-sdfsdf-4dfsdf545,7878,陕西省
