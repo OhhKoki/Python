@@ -11,10 +11,13 @@ context = SparkContext(conf=conf)
 container = [1, 2, 3, 4, 5]
 rdd = context.parallelize(container)
 
-def fun(data):
-    return
 
-rdd.map()
+def fun(data):
+    return data * 10
+
+
+# 可以通过链式调用的方式多次调用 map 方法，返回一个新的 RDD 对象（原始的 RDD 对象内容不变！！！）
+rddNew = rdd.map(fun).map(lambda x: x + 5)
 
 # 5、输出 RDD
-print(rdd.collect())
+print(rddNew.collect())
