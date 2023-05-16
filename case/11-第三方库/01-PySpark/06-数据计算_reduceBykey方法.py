@@ -8,12 +8,10 @@ conf = SparkConf().setMaster("local[*]").setAppName("test_pyspark_app")
 context = SparkContext(conf=conf)
 
 # 4、数据输入：通过 parallelize 将 Python 的数据容器转为 RDD
-container = ["i am terry", "who am i", "i am terry"]
+container = [('Math', 85), ('English', 82), ('Math', 93), ('English', 82), ('Math', 79), ('English', 76)]
 rdd = context.parallelize(container)
-# 需求：将 RDD 中的每个单词都提取出来
-rddMap = rdd.flatMap(lambda x: x.split(" "))
-rddFlatMap = rdd.flatMap(lambda x: x.split(" "))
+# 需求：按照学科进行分组，然后统计各个学科的总成绩
+rddReduceByKey = rdd.reduceByKey(lambda x,y: x + y)
 
 # 5、输出 RDD
-print(f"rddMap value is: {rddMap.collect()}")
-print(f"rddFlatMap value is: {rddFlatMap.collect()}")
+print(f"rddReduceByKey value is: {rddReduceByKey.collect()}")
