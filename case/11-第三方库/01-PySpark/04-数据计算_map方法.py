@@ -21,4 +21,4 @@ def fun(data):
 rddMap = rdd.map(fun).map(lambda x: x + 5)
 
 # 5、输出 RDD
-print(f"rddMap value is: {rddMap.collect()}")
+print(f"value is: {rddMap.collect()}")

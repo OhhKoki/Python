@@ -8,10 +8,10 @@ conf = SparkConf().setMaster("local[*]").setAppName("test_pyspark_app")
 context = SparkContext(conf=conf)
 
 # 4、数据输入：通过 parallelize 将 Python 的数据容器转为 RDD
-container = [('Math', 85), ('English', 82), ('Math', 93), ('English', 82), ('Math', 79), ('English', 76)]
+container = [1, 2, 3, 4, 5, 6]
 rdd = context.parallelize(container)
-# 需求：按照学科进行分组，然后统计各个学科的总成绩
-rddReduceByKey = rdd.reduceByKey(lambda x,y: x + y)
+# 需求：只想要偶数的数字，奇书的丢弃
+rdd_filter = rddReduceByKey = rdd.filter(lambda x: x % 2 == 0)
 
 # 5、输出 RDD
-print(f"value is: {rddReduceByKey.collect()}")
+print(f"value is: {rdd_filter.collect()}")

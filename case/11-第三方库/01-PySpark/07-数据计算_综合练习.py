@@ -20,4 +20,4 @@ rdd_word_tuple = rdd_word_lower.map(lambda word: (word, 1))
 rdd_word_reduce = rdd_word_tuple.reduceByKey(lambda x, y: x + y)
 
 # 5、输出 RDD
-print(f"rddReduceByKey value is: {rdd_word_reduce.collect()}")
+print(f"value is: {rdd_word_reduce.collect()}")
