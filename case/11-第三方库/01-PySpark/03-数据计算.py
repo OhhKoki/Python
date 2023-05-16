@@ -28,7 +28,11 @@
             案例：rdd.distinct()
 
         sortBy：对 RDD 数据，基于你传入的排序逻辑进行排序；
-
+            主要有三个参数：
+                function：传入一个函数，该函数需要返回一个数据，用于告知按照 RDD 哪个数据就行排序，例如 lambda x: x[1] 表示按照 RDD 的第二列元素进行排序；
+                ascending：True 表示升序，False 表示降序；
+                numPartitions：用多少分区排序（例如 1 表示一个分区，1 个分区则全局有序）；
+            案例：rdd_word_reduce.sortBy(lambda x: x[1], ascending=False, numPartitions=1)
 
 """
 

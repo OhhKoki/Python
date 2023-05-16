@@ -7,11 +7,19 @@ conf = SparkConf().setMaster("local[*]").setAppName("test_pyspark_app")
 # 3、创建 SparkContext 对象
 context = SparkContext(conf=conf)
 
-# 4、数据输入：通过 parallelize 将 Python 的数据容器转为 RDD
-container = [10, 10, "terry", "terry", True, True, False]
-rdd = context.parallelize(container)
-# 需求：数据去重
-rdd_distinct = rddReduceByKey = rdd.distinct()
+# 4、数据输入
+# 读取到多行句子
+rdd_line = context.textFile("/Users/terry/Documents/Workspace/PythonProjects/Python/data/文章.txt")
+# 把每一行句子，根据空格拆分成单词
+rdd_word = rdd_line.flatMap(lambda line: line.split(" "))
+# 单词转为小写
+rdd_word_lower = rdd_word.map(lambda word: word.lower())
+# 把每个单词转为二元元组，便于统计，结构为：[('his', 1), ('partner', 1)]
+rdd_word_tuple = rdd_word_lower.map(lambda word: (word, 1))
+# 分组统计
+rdd_word_reduce = rdd_word_tuple.reduceByKey(lambda x, y: x + y)
+# 根据聚合值进行排序
+rdd_word_sort = rdd_word_reduce.sortBy(lambda x: x[1], ascending=False, numPartitions=1)
 
 # 5、输出 RDD
-print(f"value is: {rdd_distinct.collect()}")
+print(f"value is: {rdd_word_sort.collect()}")
