@@ -31,7 +31,7 @@ print(f"序列切片，var05 的值为：{var05}")
 
 # 步长为 -1
 var05 = var01[3:1:-1]
-print(f"序列切片，var05 的值为：{var05}")
+print(f"序列切片，var06 的值为：{var05}")
 
 # 对字符串进行切片
 var06 = "hello world"
